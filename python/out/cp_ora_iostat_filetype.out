@@ -1,0 +1,229 @@
+<?xml version="1.0"?>                                                           
+<ROWSET>                                                                        
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/system01.dbf</FILENAME>            
+  <PHYRDS>15644</PHYRDS>                                                        
+  <READTIM>4186</READTIM>                                                       
+  <PHYWRTS>1058</PHYWRTS>                                                       
+  <WRITETIM>311</WRITETIM>                                                      
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/sysaux01.dbf</FILENAME>            
+  <PHYRDS>935</PHYRDS>                                                          
+  <READTIM>258</READTIM>                                                        
+  <PHYWRTS>664</PHYWRTS>                                                        
+  <WRITETIM>114</WRITETIM>                                                      
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/undotbs01.dbf</FILENAME>           
+  <PHYRDS>103</PHYRDS>                                                          
+  <READTIM>14</READTIM>                                                         
+  <PHYWRTS>41865</PHYWRTS>                                                      
+  <WRITETIM>1561</WRITETIM>                                                     
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/users01.dbf</FILENAME>             
+  <PHYRDS>2</PHYRDS>                                                            
+  <READTIM>0</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/example01.dbf</FILENAME>           
+  <PHYRDS>7</PHYRDS>                                                            
+  <READTIM>1</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt_ecm_depot1.dbf</FILENAME>     
+  <PHYRDS>101</PHYRDS>                                                          
+  <READTIM>59</READTIM>                                                         
+  <PHYWRTS>50</PHYWRTS>                                                         
+  <WRITETIM>6</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt.dbf</FILENAME>                
+  <PHYRDS>33381</PHYRDS>                                                        
+  <READTIM>2697</READTIM>                                                       
+  <PHYWRTS>35059</PHYWRTS>                                                      
+  <WRITETIM>2252</WRITETIM>                                                     
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>34</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.06.06.000 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt_deepdive.dbf</FILENAME>       
+  <PHYRDS>4</PHYRDS>                                                            
+  <READTIM>1</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/system01.dbf</FILENAME>            
+  <PHYRDS>21972</PHYRDS>                                                        
+  <READTIM>5045</READTIM>                                                       
+  <PHYWRTS>1969</PHYWRTS>                                                       
+  <WRITETIM>483</WRITETIM>                                                      
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/sysaux01.dbf</FILENAME>            
+  <PHYRDS>6319</PHYRDS>                                                         
+  <READTIM>706</READTIM>                                                        
+  <PHYWRTS>1983</PHYWRTS>                                                       
+  <WRITETIM>385</WRITETIM>                                                      
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/undotbs01.dbf</FILENAME>           
+  <PHYRDS>108</PHYRDS>                                                          
+  <READTIM>14</READTIM>                                                         
+  <PHYWRTS>44842</PHYWRTS>                                                      
+  <WRITETIM>2356</WRITETIM>                                                     
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/users01.dbf</FILENAME>             
+  <PHYRDS>2</PHYRDS>                                                            
+  <READTIM>0</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/example01.dbf</FILENAME>           
+  <PHYRDS>7</PHYRDS>                                                            
+  <READTIM>1</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt_ecm_depot1.dbf</FILENAME>     
+  <PHYRDS>313</PHYRDS>                                                          
+  <READTIM>120</READTIM>                                                        
+  <PHYWRTS>397</PHYWRTS>                                                        
+  <WRITETIM>14</WRITETIM>                                                       
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt.dbf</FILENAME>                
+  <PHYRDS>225731</PHYRDS>                                                       
+  <READTIM>4534</READTIM>                                                       
+  <PHYWRTS>56137</PHYWRTS>                                                      
+  <WRITETIM>3499</WRITETIM>                                                     
+ </ROW>                                                                         
+ <ROW>                                                                          
+  <HOST_NAME>OraCloud</HOST_NAME>                                               
+  <DATABASE_NAME>ORACLOUD</DATABASE_NAME>                                       
+  <INSTANCE_NAME>oracloud</INSTANCE_NAME>                                       
+  <INSTANCE_NUMBER>1</INSTANCE_NUMBER>                                          
+  <SNAP_ID>35</SNAP_ID>                                                         
+  <BEGIN_INTERVAL_TIME>31-JAN-15 02.16.07.099 PM</BEGIN_INTERVAL_TIME>          
+  <END_INTERVAL_TIME>31-JAN-15 03.00.10.493 PM</END_INTERVAL_TIME>              
+  <FILENAME>/u01/app/oracle/oradata/oracloud/mgmt_deepdive.dbf</FILENAME>       
+  <PHYRDS>4</PHYRDS>                                                            
+  <READTIM>1</READTIM>                                                          
+  <PHYWRTS>0</PHYWRTS>                                                          
+  <WRITETIM>0</WRITETIM>                                                        
+ </ROW>                                                                         
+</ROWSET>                                                                       
+                                                                                
+

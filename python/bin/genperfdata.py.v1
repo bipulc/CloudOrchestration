@@ -1,0 +1,86 @@
+#!/usr/bin/python
+import sys, os, csv, random, argparse
+sys.path.append('../lib')
+from xml.etree import ElementTree
+from xml.etree.ElementTree import Element, SubElement, Comment
+from sets import Set
+
+# This script will need to be rewritten for multi threading
+
+topology_file = csv.DictReader(open("/users/bipul/python/etc/topology"))
+output_dir="/users/bipul/python/out"
+fh = open("/users/bipul/python/etc/metrics", 'rb')
+#counter_file = csv.DictReader(open("/users/bipul/python/etc/metrics"))
+counter_file = csv.DictReader(fh)
+colltype_unq = Set()
+
+
+# Function to generate value of counter
+# Takes three argument, Minval, Maxval, Counter Type and optionally prev value
+
+# Build a unique list of Collection Type
+for colltype in counter_file:
+    colltype_unq.add(colltype["COLLTYPE"])
+
+# Reset the file handle for metrics to the begining again
+fh.seek(0)
+
+# Interate over all elements in the topology.
+for row in topology_file:
+    hname = row["HOSTNAME"]
+    dname = row["DBNAME"]
+    iname = row["INSNAME"]
+    inum = row["INSNUMBER"]
+    snapid = row["SNAPID"]
+    inssize =row["INSSIZE"]
+
+    print "Processing Hostname %s instance size %s " % (hname, inssize)
+    
+    # Get list of all CollType from counter file
+  
+    for x in colltype_unq:
+        print "Processing collection type %s" %x
+	o_fname = "%s_%s_%s_%s_%s_%s.xml" %(hname, dname, iname, inum, snapid, x)
+
+	# Ensure that the file pointer is at the begining of the file
+	fh.seek(0)
+
+        # Initialize Dictionary to hold CounterValues
+        CounterCurrVal = {}
+
+        for metrics in counter_file:
+            if inssize == metrics["INSSIZE"] and metrics["COLLTYPE"] == x:
+               print "Collection Type %s " % metrics["COLLTYPE"]
+               print "Counter Name %s" % metrics["COUNTERNAME"]
+               print "Instance Size %s" % metrics["INSSIZE"]
+               print "Min Value %s " % metrics["MINVAL"]
+               print "Max Value %s " % metrics["MAXVAL"]
+           
+               # Call random number gen function to generate a value for 
+               # counter between MIN and MAX value
+	       
+               cMinVal = int(metrics["MINVAL"])
+               cMaxVal = int(metrics["MAXVAL"])
+          
+	       CountVal = random.randint(cMinVal,cMaxVal)
+               
+               print "Value of Counter %s is %s" % (metrics["COUNTERNAME"], CountVal)
+
+               
+               # print CounterCurrVal
+	       # Store the countername, value in a dictionary object
+               # and use it for printing XML file
+               CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
+
+        ROWSET = Element( 'ROWSET' )
+        ROW = SubElement( ROWSET, 'ROW' )
+ 
+        for CntCurrVal in CounterCurrVal.items():
+             print "CounterCurrVal : CounterName - %s  CounterVal - %s " % (CntCurrVal[0], CntCurrVal[1])
+             x = SubElement( ROW, CntCurrVal[0] )
+             x.text = str(CntCurrVal[1])
+        o_fname_incl_path = os.path.join(output_dir, o_fname)
+        output_file = open( o_fname_incl_path, 'w' )
+        output_file.write( '<?xml version="1.0"?>' )
+        output_file.write( ElementTree.tostring( ROWSET ) )
+        output_file.close()
