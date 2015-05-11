@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-t", type=str, help="topology file")
 parser.add_argument("-m", type=str, help="metrics file")
 parser.add_argument("-l", type=str, help="logfile")
-parser.add_argument("-n", type=int, help="number of files to generate")
+parser.add_argument("-n", type=int, help="number of files to generate", nargs='?', const=2, default=2)
 parser.add_argument("-odir", type=str, help="output directory")
 args = parser.parse_args()
 
@@ -32,8 +32,12 @@ print ("\nMain: execution information in logfile %s " %logfile)
 print ("Starting performance data generation ...")
 helper.t_log('Starting performance data generation ...')
 
-# Function to generate value of counter
-# Takes three argument, Minval, Maxval, Counter Type and optionally prev value
+# Local Variables
+# First and Last number used for instance restart evaluation. (randomly simulate instance restart situation)
+# If a random number between crfirst and crlast is 13 then instance has been restarted
+
+crfirst = 1
+crlast = 20
 
 # Build a unique list of Collection Type
 for colltype in counter_file:
@@ -57,27 +61,31 @@ for row in topology_file:
     freq = row["FREQUENCY"]
 
     for i in range(1,args.n):
-        print ("i -- %s" %i)
-        print ("Begin Interval Time -- %s   --  Frequncy -- %s" %(begin_time,freq))
+        # print ("i -- %s" %i)
+        # print ("Begin Interval Time -- %s   --  Frequncy -- %s" %(begin_time,freq))
        
         # Check if the begin_interval_time is in future
-        nextTimeInPast = genData.chkBeginIntervalTime(begin_time, int(freq*i))
+        nextTimeInPast = genData.chkBeginIntervalTime(begin_time, int(freq)*i)
     
         if nextTimeInPast == 'Y':
      
            helper.t_log('Thread| ' + str(ThreadNum) + ':Processing Hostname ' + hname + ' instance size ' + inssize)
-           n_begin_time = genData.getNewIntervalTime(begin_time, int(freq*i))
+           n_begin_time = genData.getNewIntervalTime(begin_time, int(freq)*i)
            n_end_time = genData.getNewIntervalTime(n_begin_time, int(freq))
            n_snap_id = int(snapid) + i
 
+           # Check if the element has been restarted during last observation period
+           if genData.chkRestart(crfirst, crlast):
+              start_time = genData.newStartTime(n_begin_time, int(freq))
+              print 'Snap Id - %s Hname - %s New start time - %s' %(n_snap_id, hname, start_time)
+           
            # Function to generate Generic control info for an element
-           genData.genControlInfo(hname, dname, iname, inum, str(n_snap_id), start_time, n_begin_time, n_end_time, output_dir)
+           genData.genControlInfo(hname, dname, iname, inum, str(n_snap_id), str(start_time), n_begin_time, n_end_time, freq, output_dir)
     
            # Get list of all CollType from counter file
   
            for x in colltype_unq:
               o_fname = genData.getFileName(hname,dname,iname,x,n_snap_id)
-	      # o_fname = "%s.%s.%s.%s.%s" %(hname, dname, iname, x, snapid)
 
 	      # Ensure that the file pointer is at the begining of the file
 	      fh.seek(0)
@@ -94,11 +102,10 @@ for row in topology_file:
 	       
 	            CountVal = random.randint(int(metrics["MINVAL"]),int(metrics["MAXVAL"]))
                
-                    #print "Value of Counter %s is %s" % (metrics["COUNTERNAME"], CountVal)
+                #print "Value of Counter %s is %s" % (metrics["COUNTERNAME"], CountVal)
 
-                    # print CounterCurrVal
-	            # Store the countername, value in a dictionary object
-                    # and use it for printing XML file
+                # print CounterCurrVal
+	            # Store the countername, value in a dictionary object and use it for printing XML file
                     CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
 
               ROWSET = Element( 'ROWSET' )
