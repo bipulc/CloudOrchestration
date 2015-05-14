@@ -70,6 +70,17 @@ def newStartTime(begin_time,freq):
     return datetime.datetime.strftime(n_start_time,'%d-%b-%Y %H:%M:%S')
 
     
+def newTopologyFname(topology_file):
+    "This function returns new topology filename with full path "
+    # Get the process number of running process
+    pid = os.getpid()
+    return "%s.%s" %(topology_file, pid)
+    
+def updatetoplogy(t_writer, hname, dname, iname, inum, inssize, start_time, n_snap_id, n_begin_time, freq):
+    "This function writes a new topology file with new begin_time, snap_id and start_time if instance has been restarted"
+    t_writer.writerow([hname, dname, iname, inum, inssize, start_time, n_snap_id, n_begin_time, freq])
+
+    
 if __name__ == "__main__":
 
     print chkBeginIntervalTime('01-MAR-2015 06:00:00',900)
@@ -80,7 +91,7 @@ if __name__ == "__main__":
 
     print getFileName('GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3451)
     
-    for i in range(1,5):
+    for i in range(1,3):
        cr = chkRestart(1,20)
     
        if cr:
@@ -89,3 +100,11 @@ if __name__ == "__main__":
           print 'Run %s -- instance not restarted' %i
 
     print newStartTime('01-MAR-2015 06:00:00',60)
+    
+    print newTopologyFname('/Users/bipul/CloudCapacity/python/etc/topology')
+    
+    n_topology_file = newTopologyFname('/Users/bipul/CloudCapacity/python/etc/topology')
+    t_writer = csv.writer(open(n_topology_file, 'w+'))
+    updatetoplogy(t_writer,'HOST','DB','INS',1,'L','01-MAR-2015 06:00:00',5000,'15-MAR-2015 15:00:00',60)
+    
+    

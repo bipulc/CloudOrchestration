@@ -47,6 +47,13 @@ for colltype in counter_file:
 fh.seek(0)
 ThreadNum = 0
 
+# Generate a filename to write new topology file
+n_topology_file = genData.newTopologyFname(args.t)
+print "New Topology File - %s" %n_topology_file
+fh_n_topology = open(n_topology_file, 'w+')
+t_writer = csv.writer(fh_n_topology)
+# Write header of topology file
+genData.updatetoplogy(t_writer,'HOSTNAME','DBNAME','INSNAME','INSNUMBER','INSSIZE','STARTUPTIME','SNAPID','BEGIN_INT_TIME','FREQUENCY')
 
 # Interate over all elements in the topology.
 for row in topology_file:
@@ -122,9 +129,16 @@ for row in topology_file:
            output_file.close()
 
     # Update topology file
-    #updatetoplogy(hname, dname, iname, snapid, start_time, begin_time, end_time)
+    genData.updatetoplogy(t_writer, hname, dname, iname, inum, inssize, start_time, n_snap_id, n_begin_time, freq)
 
     print "... %s" %hname
+# Close all files
+fh_n_topology.close()
+fh.close()
+
+# rename new topology file to ensure its used in next run
+os.rename(n_topology_file, args.t)
+
 print "Performance data generated ..."
 print "Output files in directory %s" %output_dir
 print "\n"
