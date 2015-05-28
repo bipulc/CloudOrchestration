@@ -84,6 +84,8 @@ for row in topology_file:
            # Check if the element has been restarted during last observation period
            if genData.chkRestart(crfirst, crlast):
               start_time = genData.newStartTime(n_begin_time, int(freq))
+              # Set a restart flag, to be used later in the code
+              restart_flag = True
               print 'Snap Id - %s Hname - %s New start time - %s' %(n_snap_id, hname, start_time)
            
            # Function to generate Generic control info for an element
@@ -93,6 +95,10 @@ for row in topology_file:
   
            for x in colltype_unq:
               o_fname = genData.getFileName(hname,dname,iname,x,n_snap_id)
+              if not restart_flag:
+                 p_fname = genData.getPrevFileName(output_dir,hname,dname,iname,x,n_snap_id)
+              #    get previous interval filename
+              #    Parse file and load into a dictionary
 
 	      # Ensure that the file pointer is at the begining of the file
 	      fh.seek(0)
@@ -122,11 +128,11 @@ for row in topology_file:
               #print "CounterCurrVal : CounterName - %s  CounterVal - %s " % (CntCurrVal[0], CntCurrVal[1])
                  x = SubElement( ROW, CntCurrVal[0] )
                  x.text = str(CntCurrVal[1])
-           o_fname_incl_path = os.path.join(output_dir, o_fname)
-           output_file = open( o_fname_incl_path, 'w' )
-           output_file.write( '<?xml version="1.0"?>' )
-           output_file.write( ElementTree.tostring( ROWSET ) )
-           output_file.close()
+              o_fname_incl_path = os.path.join(output_dir, o_fname)
+              output_file = open( o_fname_incl_path, 'w' )
+              output_file.write( '<?xml version="1.0"?>' )
+              output_file.write( ElementTree.tostring( ROWSET ) )
+              output_file.close()
 
     # Update topology file
     genData.updatetoplogy(t_writer, hname, dname, iname, inum, inssize, start_time, n_snap_id, n_begin_time, freq)

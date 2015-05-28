@@ -57,6 +57,14 @@ def getFileName(hname, dname, iname, colltype, snap_id):
     o_fname = "%s.%s.%s.%s.%s" %(hname, dname, iname, colltype, snap_id)
     return o_fname
 
+def getPrevFileName(output_dir,hname,dname,iname,colltype,snap_id):
+    "This function generates and validate existence of previous performance data file"
+    p_fname = "%s.%s.%s.%s.%s" %(hname, dname, iname, colltype, (snap_id-1))
+    if os.path.isfile(os.path.join(output_dir, p_fname)):
+       return p_fname    
+    else:
+       return "File Not Found"
+
 def chkRestart(m,n):
     "This function checks if an instance has been restarted"
     if random.randint(m,n) == 13:
@@ -87,9 +95,11 @@ if __name__ == "__main__":
 
     print getNewIntervalTime('01-MAR-2015 06:00:00',int(60*5))
 
-    genControlInfo('GB-LD-0001','PGBEQD01','PGBEQI01','1','3451','01-MAR-2015 06:00:00','15-MAR-2015 15:00:00','15-MAR-2015 16:00:00',60,'/Users/bipul/python/out')
+    genControlInfo('GB-LD-0001','PGBEQD01','PGBEQI01','1','3453','01-MAR-2015 06:00:00','15-MAR-2015 15:00:00','15-MAR-2015 16:00:00',60,'/Users/bipul/python/out')
 
-    print getFileName('GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3451)
+    print getFileName('GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3452)
+
+    print getPrevFileName('/Users/bipul/python/out','GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3452)
     
     for i in range(1,3):
        cr = chkRestart(1,20)
