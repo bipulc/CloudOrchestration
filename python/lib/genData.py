@@ -59,11 +59,18 @@ def getFileName(hname, dname, iname, colltype, snap_id):
 
 def getPrevFileName(output_dir,hname,dname,iname,colltype,snap_id):
     "This function generates and validate existence of previous performance data file"
-    p_fname = "%s.%s.%s.%s.%s" %(hname, dname, iname, colltype, (snap_id-1))
-    if os.path.isfile(os.path.join(output_dir, p_fname)):
-       return p_fname    
-    else:
-       return "File Not Found"
+    n_snap_id = snap_id
+    # Iterate to find among last 5 files. If not found then return Null
+    MaxIteration = 5
+    while True:
+       n_snap_id = n_snap_id - 1
+       p_fname = "%s.%s.%s.%s.%s" %(hname, dname, iname, colltype, n_snap_id)
+       if os.path.isfile(os.path.join(output_dir, p_fname)):
+          return os.path.join(output_dir, p_fname)
+          break
+       if (snap_id - n_snap_id) == MaxIteration:
+          return None
+          break
 
 def chkRestart(m,n):
     "This function checks if an instance has been restarted"
@@ -76,6 +83,18 @@ def newStartTime(begin_time,freq):
     "This function creates a new start time for an instance."
     n_start_time = datetime.datetime.strptime(begin_time,'%d-%b-%Y %H:%M:%S') + datetime.timedelta(minutes = random.randint(1,freq-1))
     return datetime.datetime.strftime(n_start_time,'%d-%b-%Y %H:%M:%S')
+
+def getPrevCountVal(fname, metrics):
+    "This function retrieves and return value of metrics in the input file"
+    tree=ElementTree.parse(fname)
+    root = tree.getroot()
+    for row in root.findall('ROW'):
+       elem = row.find(metrics)
+       if elem is not None:
+          value = row.find(metrics).text
+          return int(value)
+       else:
+          return 0
 
     
 def newTopologyFname(topology_file):
@@ -99,7 +118,10 @@ if __name__ == "__main__":
 
     print getFileName('GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3452)
 
-    print getPrevFileName('/Users/bipul/python/out','GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3452)
+    p_fname = getPrevFileName('/Users/bipul/python/out','GB-LD-0001','PGBEQD01','PGBEQI01','IOSTAT',3456)
+    print p_fname
+   
+    print getPrevCountVal('/Users/bipul/python/out/GB-LD-0001.PGBEQD01.PGBEQI01.IOSTAT.3458','READTIM')
     
     for i in range(1,3):
        cr = chkRestart(1,20)

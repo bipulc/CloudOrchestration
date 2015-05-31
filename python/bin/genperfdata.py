@@ -82,6 +82,8 @@ for row in topology_file:
            n_snap_id = int(snapid) + i
 
            # Check if the element has been restarted during last observation period
+           
+           restart_flag = False
            if genData.chkRestart(crfirst, crlast):
               start_time = genData.newStartTime(n_begin_time, int(freq))
               # Set a restart flag, to be used later in the code
@@ -95,12 +97,8 @@ for row in topology_file:
   
            for x in colltype_unq:
               o_fname = genData.getFileName(hname,dname,iname,x,n_snap_id)
-              if not restart_flag:
-                 p_fname = genData.getPrevFileName(output_dir,hname,dname,iname,x,n_snap_id)
-              #    get previous interval filename
-              #    Parse file and load into a dictionary
 
-	      # Ensure that the file pointer is at the begining of the file
+	      # Ensure that the file pointer for the metrics file is at the begining of the file
 	      fh.seek(0)
 
               # Initialize Dictionary to hold CounterValues
@@ -109,17 +107,26 @@ for row in topology_file:
               for metrics in counter_file:
                  if inssize == metrics["INSSIZE"] and metrics["COLLTYPE"] == x:
                     helper.t_log('Thread| ' + str(ThreadNum) + ': Collection Type ' +metrics["COLLTYPE"] + ' - Counter Name ' + metrics["COUNTERNAME"] + ' - Min Value ' + str(metrics["MINVAL"]) + ' - Max Value ' + str(metrics["MAXVAL"]))
-           
-                    # Call random number gen function to generate a value for 
-                    # counter between MIN and MAX value
-	       
-	            CountVal = random.randint(int(metrics["MINVAL"]),int(metrics["MAXVAL"]))
+   
+                    # Check if the Counter is a cumulative counter and the instance has not been restarted, read the previous perf data file
+                    if metrics["COUNTERTYPE"] == 'C' and not restart_flag:
+                       p_fname = genData.getPrevFileName(output_dir,hname,dname,iname,x,n_snap_id)
+                       if p_fname is not None:
+                          # Get the value of Counter and add to random number generated between Min and Max
+                          CountVal = random.randint(int(metrics["MINVAL"]),int(metrics["MAXVAL"])) + genData.getPrevCountVal(p_fname, metrics["COUNTERNAME"])
+                          CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
+                       else:
+                          # Previous perf datafile not found
+                          CountVal = random.randint(int(metrics["MINVAL"]),int(metrics["MAXVAL"]))
+                          CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
+                    else:   
+                       # Call random number gen function to generate a value for counter between MIN and MAX value
+	               CountVal = random.randint(int(metrics["MINVAL"]),int(metrics["MAXVAL"]))
+                       CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
                
-                #print "Value of Counter %s is %s" % (metrics["COUNTERNAME"], CountVal)
-
-                # print CounterCurrVal
+                    # print "Value of Counter %s is %s" % (metrics["COUNTERNAME"], CountVal)
+                    # print CounterCurrVal
 	            # Store the countername, value in a dictionary object and use it for printing XML file
-                    CounterCurrVal[metrics["COUNTERNAME"]] = CountVal
 
               ROWSET = Element( 'ROWSET' )
               ROW = SubElement( ROWSET, 'ROW' )
