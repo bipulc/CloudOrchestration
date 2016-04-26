@@ -9,4 +9,12 @@ The Cloud Orchestration framework is a set of python script embedding the REST A
 
 Directory Structure
 
+CloudOrchestrator -> Top-level 
+  /bin -> calling scripts 
+  /etc -> json files and web-services reference file
+  /lib -> python script for modules / helper script
+  /log -> execution log file
+  
+
+
 
