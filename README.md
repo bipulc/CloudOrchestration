@@ -7,7 +7,7 @@ The Cloud Orchestration framework is a set of python script embedding the REST A
 1.  Demonstrate the ease of managing Oracle Database Cloud Service via REST APIs.
 2.  A sample code for integration with existing workflow.
 
-###Directory Structure
+####Directory Structure
 
 CloudOrchestrator -> Top-level 
   /bin -> calling scripts 
