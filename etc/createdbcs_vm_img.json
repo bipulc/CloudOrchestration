@@ -6,7 +6,7 @@
    "subscriptionType": "MONTHLY",
    "description": "DBCS Created via RESTful API",
    "shape": "oc3",
-   "vmPublicKeyText": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD/8+8NsJRKKphRkgOUcxLf83MnG6nSJfhSC2sjxJf6MbzVkILJevx283saKdaYHfrZCiVAAEZPxboYf8XEuM17sH2iET1oaHLZNDAfipcgNXqIc7xHFTiZpYxJkKXl1yQfO7QrT89OLqQMgQMRap5Lp/KALqWGCkr4Z8jciOLTAgVLAgiY/HYfJMJtBvUJqiMW5zdQTyfjEmtT3C7GhfAc1wG6VwmiGJf7zhuD+VRq3aVIRLebSB+oRUwTyYW9otS08JNdf/H0+V6JjoSYDA8tLwY4WMZctx+WXs1r/40qrvOcb0blH8ewW9Yeisq6R0ELmJvIIyIdiu+e9Srj+n9 bipul@Bipuls-MBP",
+   "vmPublicKeyText": "ssh-rsa AAAAB3NzaC1...",
    "parameters": [
     {
        "type": "db"
