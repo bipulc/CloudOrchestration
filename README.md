@@ -17,9 +17,9 @@ CloudOrchestrator -> Top-level
   
 ####Installation 
 
-Download script CloudOrchestrator.tar from <location>.
-Untar the file into a directory named CloudOrchestrator (or any other name you like).
-Install certificate file as per instruction from <link>
+1.  Download script CloudOrchestrator.tar from <location>.
+2.  Untar the file into a directory named CloudOrchestrator (or any other name you like).
+3.  Install certificate file as per instruction from <link>
 
 ####Usage
 
