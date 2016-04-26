@@ -48,6 +48,12 @@ $
 
 ####Features
 
+####Prerequisite
+
+1.  Oracle Cloud Account with DBCS subscription
+2.  Python 2.6 or 2.7
+3.  cacert.pem file as per installation instructions.
+
 ####Example
 
 
