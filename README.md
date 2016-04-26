@@ -22,7 +22,8 @@ CloudOrchestrator -> Top-level
 3.  Install certificate file as per instruction from <link>
 
 ####Usage
-'''
+
+```
 $./opc-dbcs.py -h
 usage: opc-dbcs.py [-h] [-i I] [-u U] [-o O] [-w W] [-l L] [-c C] [-d [D]]
                    [-n [N]] [-s [S]] [-j [J]]
@@ -40,7 +41,9 @@ optional arguments:
   -s [S]      compute shape
   -j [J]      job number
 $
-'''
+
+```
+
 ####Example
 
 
