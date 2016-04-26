@@ -1,4 +1,4 @@
-#Managaing Database Cloud Services using REST API
+##Managaing Database Cloud Services using REST API
 
 Oracle Database Cloud Service offers REST APIs to create and manage service instances. These APIs are documented in Oracle Cloud Documentation at http://docs.oracle.com/cloud/latest/dbcs_dbaas/CSDBR/toc.htm. 
 
@@ -10,7 +10,8 @@ The Cloud Orchestration framework is a set of python script embedding the REST A
 ####Directory Structure
 
 CloudOrchestrator -> Top-level 
-  - /bin -> calling scripts 
+  - /bin -> 
+  -   opc-dbcs.py 
   - /etc -> json files and web-services reference file
   - /lib -> python script for modules / helper script
   - /log -> execution log file
