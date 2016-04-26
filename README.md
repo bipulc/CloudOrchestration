@@ -10,8 +10,8 @@ The Cloud Orchestration framework is a set of python script embedding the REST A
 ####Directory Structure
 
 CloudOrchestrator -> Top-level 
-  - /bin -> 
-  -   opc-dbcs.py 
+  - /bin -> main script directory
+     1.  opc-dbcs.py 
   - /etc -> json files and web-services reference file
   - /lib -> python script for modules / helper script
   - /log -> execution log file
