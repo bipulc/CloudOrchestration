@@ -1,6 +1,6 @@
 ##Managaing Database Cloud Services using REST API
 
-Oracle Database Cloud Service offers REST APIs to create and manage service instances. These APIs are documented in [Oracle Cloud Documentation] (http://docs.oracle.com/cloud/latest/dbcs_dbaas/CSDBR/toc.htm) . 
+Oracle Database Cloud Service offers REST APIs to create and manage service instances. These APIs are described in detail in [Oracle Cloud Documentation] (http://docs.oracle.com/cloud/latest/dbcs_dbaas/CSDBR/toc.htm) . 
 
 The Cloud Orchestration framework is a set of python script embedding the REST APIs. The purpose of this project is
 
@@ -19,7 +19,7 @@ CloudOrchestrator -> Top-level
 
 1.  Download script CloudOrchestrator.tar from [Github Page] (https://github.com/bipulc/CloudOrchestration/blob/master/CloudOrchestrator.tar).
 2.  Untar the file into a directory named CloudOrchestrator (or any other name you like).
-3.  Install certificate file as per instruction from <link>
+3.  Install certificate file as per instruction from [cURL Documentation site] (https://curl.haxx.se/docs/caextract.html). Its as easy as download the cacert.pem file and store in a directory ( e.g. I have stored the cacert.pem file in /Users/bipul/keys directory)
 
 ####Usage
 
