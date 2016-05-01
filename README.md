@@ -50,6 +50,16 @@ $
 
 ####Features
 
+opc-dbcs.py provides the following functionality from command line using web services.
+
+1.  Build Oracle Database Cloud Service (Single Instance and RAC).
+2.  View status of database service(s) in an indentity domain.
+3.  Scale UP and Scale DOWN CPU and Memory allocated to a Database Cloud Service.
+4.  Allocate more storage to Database Cloud Service.
+5.  Manage Lifecycle (Stop, Start and Restart) Database Cloud Service.
+
+Output of the execution is written to standard output (screen) as well as to a log file for auditing and review if necessary.
+
 ####Program documentation
 ####Prerequisite
 
