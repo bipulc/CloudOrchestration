@@ -22,8 +22,10 @@ Top level directory - CloudOrchestrator
 
 ####Installation 
 
-1.  Download script CloudOrchestrator.tar from [release page] (https://github.com/bipulc/CloudOrchestration/releases/tag/0.1).
-2.  Install certificate file as per instruction from [cURL Documentation site] (https://curl.haxx.se/docs/caextract.html). Its as easy as download the cacert.pem file and store in a directory ( e.g. I have stored the cacert.pem file in /Users/bipul/keys directory)
+1.  Download source code from [release page] (https://github.com/bipulc/CloudOrchestration/releases/tag/0.1).
+2.  Untar (or unzip) in any directory on your computer.
+3.  Install certificate file as per instruction from [cURL Documentation site] (https://curl.haxx.se/docs/caextract.html). Its as easy as download the cacert.pem file and store in a directory ( e.g. I have stored the cacert.pem file in /Users/bipul/keys directory)
+4.  Change directory to bin, and run ./opc-dbcs.py -h to verify installation.
 
 ####Usage
 
