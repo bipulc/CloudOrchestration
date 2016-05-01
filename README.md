@@ -62,7 +62,7 @@ Output of the execution is written to standard output (screen) as well as to a l
 
 ####High Level Flowchart
 
-The diagram below shows high level flow of the program. Validation of arguments and parsing of input parameter is carried out in main script opc-dbcs.py. Library file opchelper.py implements module for invocation of the web services with appropriate verb. If the request is accepted by Oracle Public Cloud ( http return code 202), then it reurns job id to the calling script, which then monitors the job until completion.
+The diagram below shows high level flow of the program. Validation of arguments and parsing of input parameters are carried out in  script opc-dbcs.py. Library file opchelper.py implements module for invocation of the web services with appropriate verb. A job id is returned to the calling script, if the request is accepted by Oracle Public Cloud ( http return code 202). opc-dbcs.py script then monitors the job until completion. It writes log of the execution on the screen and in the specified log file.
 
 ![Image of Flowchart](https://github.com/bipulc/CloudOrchestration/blob/master/OPC-DBCS-WsOpsInterface.001.jpeg)
 
