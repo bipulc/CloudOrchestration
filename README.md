@@ -19,9 +19,8 @@ CloudOrchestrator -> Top-level
   
 ####Installation 
 
-1.  Download script CloudOrchestrator.tar from [Github Page] (https://github.com/bipulc/CloudOrchestration/blob/master/CloudOrchestrator.tar).
-2.  Untar the file into a directory named CloudOrchestrator (or any other name you like).
-3.  Install certificate file as per instruction from [cURL Documentation site] (https://curl.haxx.se/docs/caextract.html). Its as easy as download the cacert.pem file and store in a directory ( e.g. I have stored the cacert.pem file in /Users/bipul/keys directory)
+1.  Download script CloudOrchestrator.tar from [release page] (https://github.com/bipulc/CloudOrchestration/releases/tag/0.1).
+2.  Install certificate file as per instruction from [cURL Documentation site] (https://curl.haxx.se/docs/caextract.html). Its as easy as download the cacert.pem file and store in a directory ( e.g. I have stored the cacert.pem file in /Users/bipul/keys directory)
 
 ####Usage
 
