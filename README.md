@@ -60,10 +60,11 @@ opc-dbcs.py provides the following functionality from command line using web ser
 
 Output of the execution is written to standard output (screen) as well as to a log file for auditing and review if necessary.
 
-####Program documentation
+####High Level Flowchart
 
-The script 
+The diagram below shows high level flow of the program. Validation of arguments and parsing of input parameter is carried out in main script opc-dbcs.py. Library file opchelper.py implements module for invocation of the web services with appropriate verb. If the request is accepted by Oracle Public Cloud ( http return code 202), then it reurns job id to the calling script, which then monitors the job until completion.
 
+![Image of Flowchart](https://github.com/bipulc/CloudOrchestration/blob/master/OPC-DBCS-WsOpsInterface.001.jpeg)
 
 ####Prerequisite
 
