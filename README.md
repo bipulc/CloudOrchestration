@@ -61,6 +61,10 @@ opc-dbcs.py provides the following functionality from command line using web ser
 Output of the execution is written to standard output (screen) as well as to a log file for auditing and review if necessary.
 
 ####Program documentation
+
+The script 
+
+
 ####Prerequisite
 
 1.  Oracle Cloud Account with DBCS subscription
