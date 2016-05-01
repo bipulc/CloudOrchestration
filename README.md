@@ -17,6 +17,12 @@ CloudOrchestrator -> Top-level
   - /lib -> python script for modules / helper script
   - /log -> execution log file
   
+| Sub Directory | Description | Files |
+|---------------|-------------|-------|
+|bin            | Main script directory | opc-dbcs.py|
+|etc            | Reference files such as json and web-services configuration |opc-dbcs-ws.ref|
+|               |                                                             |createdbcs_vm_img.json|
+
 ####Installation 
 
 1.  Download script CloudOrchestrator.tar from [release page] (https://github.com/bipulc/CloudOrchestration/releases/tag/0.1).
