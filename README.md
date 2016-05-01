@@ -11,7 +11,7 @@ The code has been developed using Python 2.7.10 on OS X 10.11, but should work o
 
 ####Directory Structure
 
-CloudOrchestrator -> Top-level 
+Top level directory - CloudOrchestrator
   
 | Sub Directory | Description | Files |
 |---------------|-------------|-------|
