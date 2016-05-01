@@ -20,8 +20,9 @@ CloudOrchestrator -> Top-level
 | Sub Directory | Description | Files |
 |---------------|-------------|-------|
 |bin            | Main script directory | opc-dbcs.py|
-|etc            | Reference files such as json and web-services configuration |opc-dbcs-ws.ref|
-|               |                                                             |createdbcs_vm_img.json|
+|etc            | Reference files such as json and web-services configuration |opc-dbcs-ws.ref,createdbcs_vm_img.json |
+|lib            | Python sript for modules and helper scripts|opchelper.py|
+|log            | Log file from execuetion of ops-dbcs.py script|
 
 ####Installation 
 
