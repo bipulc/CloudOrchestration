@@ -12,10 +12,6 @@ The code has been developed using Python 2.7.10 on OS X 10.11, but should work o
 ####Directory Structure
 
 CloudOrchestrator -> Top-level 
-  - /bin -> main script directory
-  - /etc -> json files and web-services reference file
-  - /lib -> python script for modules / helper script
-  - /log -> execution log file
   
 | Sub Directory | Description | Files |
 |---------------|-------------|-------|
