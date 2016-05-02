@@ -76,5 +76,61 @@ The diagram below shows high level flow of the program. Validation of arguments 
 
 ####Example
 
+#####Build a Database Cloud Service
 
+```
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o BUILD -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -d <location of service def json file>
 
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o BUILD -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -d ../etc/create_sidb.json
+
+```
+
+#####View status of Database Service
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o VIEW -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o VIEW -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
+
+#####Stopping a Service Instance
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o STOP -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o STOP -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
+
+#####Starting a Service Instance
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o START -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o START -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
+
+#####Restarting a Service Instance ( combined Stop and Start operations )
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o RESTART -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o RESTART -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
+
+#####Scale UP or DOWN a Service Instance
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o SCALE -s <target compute shape> -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o SCALE -s oc4 -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
