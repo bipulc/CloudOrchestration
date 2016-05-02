@@ -134,3 +134,12 @@ The diagram below shows high level flow of the program. Validation of arguments 
 ./opc-dbcs.py -i gse00000379 -u cloud.admin -o SCALE -s oc4 -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
 
 ```
+#####Deleting a Service Instance
+
+```
+
+./opc-dbcs.py -i <identity domain name> -u <cloud user name> -o DELETE -w <location of web services ref file> -l <location of log file> -c <location of cacert.pem file> -n <DB service name>
+
+./opc-dbcs.py -i gse00000379 -u cloud.admin -o DELETE -w ../etc/opc-dbcs-ws.ref -l ../log/opc_dbcs.log -c /Users/bipul/keys/cacert.pem -n BKDB001
+
+```
